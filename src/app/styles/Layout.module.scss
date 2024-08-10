@@ -1,0 +1,18 @@
+@use "../../app/styles/common/function";
+
+.main {
+  background: linear-gradient(
+    to left,
+    #b9e2e249,
+    #cfe3e32d,
+    #b5d0d08f,
+    #cfe3e32d
+  );
+  min-height: 100dvh;
+  color: #47464a;;
+}
+
+.content {
+  padding-top: 100px;
+  padding-inline: function.calcSize(5, 120, 360, 1920);
+}

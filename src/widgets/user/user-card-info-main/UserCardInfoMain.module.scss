@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.infoGridLine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
