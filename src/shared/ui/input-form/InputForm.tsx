@@ -1,8 +1,9 @@
 import type { HTMLInputTypeAttribute } from 'react';
-
-import styles from './LoginMainForm.module.scss';
 import { EyeOpenSvg } from './EyeOpenSvg';
 import { EyeCloseSvg } from './EyeCloseSvg';
+
+import styles from './LoginMainForm.module.scss';
+
 
 type Props = {
   value: string;
@@ -26,7 +27,13 @@ const InputForm = ({ error, onClickEye, name, onChange, placeholder, type, value
     onChange={e => onChange(e.target.value)} 
     />
     {onClickEye &&
-    <button onClick={onClickEye} className={styles.eyeContainer}>
+    <button
+    type='button'
+     onClick={(e) => {
+      e.stopPropagation();
+      onClickEye();
+     }} 
+     className={styles.eyeContainer}>
       {type === 'password' ? <EyeCloseSvg /> : <EyeOpenSvg />}
     </button>
     }
