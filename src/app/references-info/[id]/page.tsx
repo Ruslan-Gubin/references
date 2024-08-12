@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/shared/ui/breadcrumbs/Breadcrumbs";
-import { UserCardInfoMain } from "@/widgets/user/user-card-info-main/UserCardInfoMain";
+import { ReferencedInfoCard  } from "@/widgets/user/reference-info-main/ReferencedInfoCard";
 import { mockData } from "@/shared/data/mockData";
 
 type Props = {
@@ -35,7 +35,7 @@ export default async function UserInfo({ params: { id } }: Props) {
   return (
     <>
       <Breadcrumbs breadcrumbs={breadcrumb} />
-      {currentReference && <UserCardInfoMain reference={currentReference} />}
+      {currentReference && <ReferencedInfoCard reference={currentReference} />}
     </>
   );
 }

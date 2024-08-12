@@ -1,18 +1,18 @@
 import InfoItemValue from "../info-item-value/InfoItemValue";
-import { CardMain } from "../info-card-main/CardMain";
+import { InfoCard } from "../info-card/InfoCard";
 import { stateColorMap } from "@/shared/constants/referenceStateColorsMap";
 import type { ReferenceModel } from "@/shared/data/types";
 import { ShowMore } from "../show-more/ShowMore";
 
-import styles from "./UserCardInfoMain.module.scss";
+import styles from "./ReferencedInfoCard.module.scss";
 
 type Props = {
   reference: ReferenceModel;
 };
 
-const UserCardInfoMain = ({ reference }: Props) => {
+const ReferencedInfoCard = ({ reference }: Props) => {
   return (
-    <CardMain title="Основная информация">
+    <InfoCard title="Основная информация">
       <div className={styles.root}>
         <div className={styles.infoGridLine}>
           <InfoItemValue label="Номер" value={reference.number} />
@@ -38,8 +38,8 @@ const UserCardInfoMain = ({ reference }: Props) => {
           </>
         </ShowMore>
       </div>
-    </CardMain>
+    </InfoCard>
   );
 };
 
-export { UserCardInfoMain };
+export { ReferencedInfoCard };

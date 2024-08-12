@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import styles from "./CardMain.module.scss";
+import styles from "./InfoCard.module.scss";
 
 type Props = {
   title: string;
@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-const CardMain = ({ title, children, className }: Props) => {
+const InfoCard = ({ title, children, className }: Props) => {
   return (
     <section className={`${styles.root} ${className}`}>
       <header className={styles.header}>
@@ -19,4 +19,4 @@ const CardMain = ({ title, children, className }: Props) => {
   );
 };
 
-export { CardMain };
+export { InfoCard };
